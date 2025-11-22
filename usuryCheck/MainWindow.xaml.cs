@@ -54,7 +54,7 @@ namespace usuryCheck
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to load jurisdictions.json: " + ex.Message);
+                SetResult("Failed to load jurisdictions.json: ",[ ex.Message]);
             }
         }
 
@@ -75,22 +75,22 @@ namespace usuryCheck
             // Parse inputs
             if (!TryParseDecimal(PrincipalBox.Text, out decimal principal) || principal <= 0)
             {
-                MessageBox.Show("Enter a valid principal > 0.");
+                SetResult("Enter a valid principal > 0.", []);
                 return;
             }
             if (!TryParseDecimal(AnnualRateBox.Text, out decimal nominalAnnualRate) || nominalAnnualRate < 0)
             {
-                MessageBox.Show("Enter a valid annual rate (>= 0).");
+                SetResult("Enter a valid annual rate (>= 0).", []);
                 return;
             }
             if (!int.TryParse(TermBox.Text, out int months) || months <= 0)
             {
-                MessageBox.Show("Enter a valid term in months (> 0).");
+                SetResult("Enter a valid term in months (> 0).", []);
                 return;
             }
             if (!TryParseDecimal(FeesBox.Text, out decimal fees) || fees < 0)
             {
-                MessageBox.Show("Enter a valid fees amount (>= 0).");
+                SetResult("Enter a valid fees amount (>= 0).", []);
                 return;
             }
 

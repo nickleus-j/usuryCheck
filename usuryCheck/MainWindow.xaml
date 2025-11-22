@@ -60,7 +60,7 @@
         </StackPanel>
 
         <!-- Right: Result card -->
-        <Border Grid.Column="1" Background="#FFDFEFD9" CornerRadius="8" Padding="12" BorderBrush="#FFDDDDDD" BorderThickness="1">
+        <Border Grid.Column="1" Background="#FFBFD2B8" CornerRadius="8" Padding="12" BorderBrush="#FFDDDDDD" BorderThickness="1">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Image x:Name="ResultIcon" Width="42" Height="42" Margin="0,0,8,0"/>
@@ -76,7 +76,7 @@
                     <TextBlock x:Name="DetailLine4" Text="—" Margin="0,4"/>
                 </StackPanel>
 
-                <TextBlock x:Name="FooterNote" FontStyle="Italic" FontSize="11" Foreground="Gray" Margin="0,12,0,0"
+                <TextBlock x:Name="FooterNote" FontStyle="Italic" FontSize="11" Foreground="DarkGoldenrod" Margin="0,12,0,0"
                            Text="Jurisdiction caps are loaded from jurisdictions.json (editable)."/>
             </StackPanel>
         </Border>

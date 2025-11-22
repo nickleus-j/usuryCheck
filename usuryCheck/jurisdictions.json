@@ -18,6 +18,12 @@
     "Description": "Caps for payday-loan-type products are around 400% APR according to user-reported data. :contentReference[oaicite:4]{index=4}"
   },
   {
+    "Code": "ID",
+    "Name": "Idaho (USA)",
+    "MaxAprPercent": 652.0,
+    "Description": "Limited cap / very high rates allowed per some sources; unconscionability standard applies. :contentReference[oaicite:5]{index=5}"
+  },
+  {
     "Code": "MILACT",
     "Name": "US Military Lending Act (USA)",
     "MaxAprPercent": 36.0,
@@ -46,5 +52,23 @@
     "Name": "Switzerland",
     "MaxAprPercent": 10.0,
     "Description": "Swiss Consumer Credit Act: max interest = SARON + 10%. :contentReference[oaicite:9]{index=9}"
+  },
+  {
+    "Code": "AU",
+    "Name": "Australia (National)",
+    "MaxAprPercent": 48.0,
+    "Description": "Under the National Consumer Credit Protection Act (Australia), a 48% p.a. cap (inclusive of fees) applies to many consumer credit contracts. :contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "Code": "TO",
+    "Name": "Tonga (Pacific)",
+    "MaxAprPercent": 11.0,
+    "Description": "Typical commercial lending margins in Tonga are ~6% to 11% over base, based on a comparative report. :contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "Code": "SB",
+    "Name": "Solomon Islands (Pacific)",
+    "MaxAprPercent": 11.0,
+    "Description": "Reported typical interest margin for commercial bank loans is ~11%. :contentReference[oaicite:9]{index=9}"
   }
 ]
