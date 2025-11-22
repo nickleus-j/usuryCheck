@@ -1,0 +1,50 @@
+[
+  {
+    "Code": "TX",
+    "Name": "Texas (USA)",
+    "MaxAprPercent": 662.0,
+    "Description": "No meaningful cap for payday-style lenders; reported average of 662% APR for some short-term lenders. :contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "Code": "WI",
+    "Name": "Wisconsin (USA)",
+    "MaxAprPercent": 338.0,
+    "Description": "Very high allowable rates for certain payday or title lenders (no strict cap). :contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "Code": "MI",
+    "Name": "Michigan (USA)",
+    "MaxAprPercent": 400.0,
+    "Description": "Caps for payday-loan-type products are around 400% APR according to user-reported data. :contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "Code": "MILACT",
+    "Name": "US Military Lending Act (USA)",
+    "MaxAprPercent": 36.0,
+    "Description": "Federal cap for certain consumer credit products under the Military Lending Act. :contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "Code": "PL",
+    "Name": "Poland (EU)",
+    "MaxAprPercent": 45.0,
+    "Description": "Under Poland’s Anti-Usury Act (2024), stricter annual percentage rate limits are introduced. :contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "Code": "FR",
+    "Name": "France (EU)",
+    "MaxAprPercent": 20.0,
+    "Description": "For certain consumer credit / revolving credit, official ceiling around 20% for high-cost credit. :contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "Code": "IT",
+    "Name": "Italy (EU)",
+    "MaxAprPercent": 50.0,
+    "Description": "Italian ‘usury’ threshold law — interest rates cannot exceed ~50% of bank APR per older usury legislation. :contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "Code": "CH",
+    "Name": "Switzerland",
+    "MaxAprPercent": 10.0,
+    "Description": "Swiss Consumer Credit Act: max interest = SARON + 10%. :contentReference[oaicite:9]{index=9}"
+  }
+]
