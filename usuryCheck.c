@@ -9,7 +9,14 @@ double calculate_apr(double principal, double interest, int term_in_years) {
 int is_usury(double apr, double threshold) {
     return apr > threshold;
 }
-
+void informIfUsury(double apr, double threshold){
+	printf("APR is %.2f\n",apr);
+	if (is_usury(apr, threshold)) {
+        printf("⚠️ Usury detected! APR exceeds %.2f%% legal threshold.\n", threshold);
+    } else {
+        printf("✅ Loan is within legal interest limits.\n");
+    }
+}
 int main() {
     double principal, interest, threshold;
     int term;
@@ -26,12 +33,12 @@ int main() {
     printf("Total interest: %.2f\n", interest);
     printf("Term: %d year(s)\n", term);
     printf("APR: %.2f%%\n", apr);
-
-    if (is_usury(apr, threshold)) {
-        printf("⚠️ Usury detected! APR exceeds %.2f%% legal threshold.\n", threshold);
-    } else {
-        printf("✅ Loan is within legal interest limits.\n");
-    }
-
+	informIfUsury(apr,threshold);
+    printf("Enter principal: ");
+	scanf("%lf",&principal);
+	printf("Enter interest: ");
+	scanf("%lf",&interest);
+	apr = calculate_apr(principal, interest, term);
+	informIfUsury(apr,threshold);
     return 0;
 }
