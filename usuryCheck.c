@@ -38,6 +38,8 @@ int main() {
 	scanf("%lf",&principal);
 	printf("Enter interest: ");
 	scanf("%lf",&interest);
+    printf("Term in years: ");
+    scanf("%d",&term);
 	apr = calculate_apr(principal, interest, term);
 	informIfUsury(apr,threshold);
     return 0;
