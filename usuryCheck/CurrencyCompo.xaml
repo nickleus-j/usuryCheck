@@ -8,9 +8,9 @@
              d:DesignHeight="120" d:DesignWidth="200">
     <WrapPanel MinHeight="32">
         <TextBlock Text="Currency"/>
-        <ComboBox MinWidth="50"
+        <ComboBox MinWidth="50" x:Name="CurrencyField"
           ItemsSource="{Binding Currencies}" MinHeight="32"
-          SelectedItem="{Binding SelectedCurrency, Mode=TwoWay}"
+          SelectedItem="{Binding CurrencySymbol, Mode=TwoWay}"
           IsEditable="False"/>
     </WrapPanel>
 </UserControl>

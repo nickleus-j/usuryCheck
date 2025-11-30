@@ -35,11 +35,27 @@ namespace usuryCheck
                                 .Select(ci => new RegionInfo(ci.Name))
                                 .GroupBy(r => r.ISOCurrencySymbol)
                                 .Select(g => g.First())
+                                .OrderBy(sym=> sym.ISOCurrencySymbol)
                                 .Select(r => r.ISOCurrencySymbol).ToList();
             
             Currencies = new ObservableCollection<string>(currencyList);
             // Default selection
-            SelectedCurrency = Currencies.FirstOrDefault();
+            SelectedCurrency = "USD";
+        }
+        public string CurrencySymbol
+        {
+            get { return SelectedCurrency; }
+            set
+            {
+                SelectedCurrency = value;
+                OnPropertyChanged(nameof(CurrencySymbol));
+            }
+        }
+
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

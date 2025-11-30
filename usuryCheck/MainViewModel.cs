@@ -150,7 +150,7 @@ namespace usuryCheck
             // Effective APR approximation including fees: spread upfront fees over term
             var financedAmount = principal;
             var totalFees = IncludeFeesInAPR ? upfrontFees : 0m;
-
+            
             // Simple effective rate: add fee amortization as a monthly cost factor
             var monthlyFeeRate = totalFees / financedAmount / termMonths; // rough allocation
             var effectiveMonthlyRate = monthlyRate + monthlyFeeRate;
@@ -167,7 +167,7 @@ namespace usuryCheck
             ResultDetail =
                 $"Computed APR: {effectiveAPR:F2}% (Nominal: {annualRatePercent:F2}%, Fees included: {IncludeFeesInAPR})\n" +
                 $"Jurisdiction cap: {capPercent:F2}%.\n" +
-                $"Inputs — Principal: {principal:C}, Term: {termMonths} months, Up-front Fees: {upfrontFees:C}.";
+                $"Inputs — Principal: {CurrentCurrency} {principal}, Term: {termMonths} months, Up-front Fees: {upfrontFees:C}.";
         }
 
         private (decimal capPercent, string label) GetCapForJurisdiction(Jurisdiction j)
@@ -185,6 +185,16 @@ namespace usuryCheck
             SelectedJurisdiction = WrapJurisdictions().First();
             ResultTitle = "Result goes here – e.g. \"Loan complies with XYZ law.\"";
             ResultDetail = string.Empty;
+        }
+        private string _currentCurrency = "USD"; // Default value
+        public string CurrentCurrency
+        {
+            get { return _currentCurrency; }
+            set
+            {
+                _currentCurrency = value;
+                OnPropertyChanged();
+            }
         }
 
         private static decimal ParseDecimal(string? s)

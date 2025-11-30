@@ -25,5 +25,22 @@ namespace usuryCheck
             InitializeComponent();
             DataContext = new CurrencyViewModel();
         }
+        public string SelectedCurrency => ((CurrencyViewModel)DataContext).SelectedCurrency;
+        public static readonly DependencyProperty CurrencyProperty =
+            DependencyProperty.Register("Currency", typeof(string), typeof(CurrencyCompo),
+                new PropertyMetadata("USD")); // Default value
+
+        public string Currency
+        {
+            get { return SelectedCurrency; }
+            set { SetValue(CurrencyProperty, value); }
+        }
+
+        public string CurrencySymbol
+        {
+            get { return (string)GetValue(CurrencyProperty); }
+            set { SetValue(CurrencyProperty, value); }
+        }
+
     }
 }

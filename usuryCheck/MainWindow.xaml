@@ -104,7 +104,7 @@
 
                 <!-- Buttons -->
                 <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Left" >
-                    <local:CurrencyCompo/>
+                    <local:CurrencyCompo x:Name="CurrencyField" Currency="{Binding CurrentCurrency, Mode=TwoWay}"/>
                     <Button Content="Calculate" Width="110" Height="32" 
                             Command="{Binding CalculateCommand}" Background="#FF8EE078" FontFamily="Noto Sans JP Medium"/>
                     <Button Content="Reset" Width="90" Height="32" Background="#FF6F0B71" FontFamily="Noto Sans JP Medium"
