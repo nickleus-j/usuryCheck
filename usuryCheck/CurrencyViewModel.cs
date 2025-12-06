@@ -42,20 +42,5 @@ namespace usuryCheck
             // Default selection
             SelectedCurrency = "USD";
         }
-        public string CurrencySymbol
-        {
-            get { return SelectedCurrency; }
-            set
-            {
-                SelectedCurrency = value;
-                OnPropertyChanged(nameof(CurrencySymbol));
-            }
-        }
-
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

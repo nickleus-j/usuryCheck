@@ -160,6 +160,7 @@ namespace usuryCheck
             var (capPercent, label) = GetCapForJurisdiction((Jurisdiction)selectedJurisdiction.Value);
             var complies = effectiveAPR <= capPercent;
 
+            decimal monthsInYear=12,interest = principal * (termMonths / monthsInYear) * (annualRatePercent / 100);
             ResultTitle = complies
                 ? $"Loan complies with {label}."
                 : $"Potential usury under {label}.";
@@ -167,7 +168,8 @@ namespace usuryCheck
             ResultDetail =
                 $"Computed APR: {effectiveAPR:F2}% (Nominal: {annualRatePercent:F2}%, Fees included: {IncludeFeesInAPR})\n" +
                 $"Jurisdiction cap: {capPercent:F2}%.\n" +
-                $"Inputs — Principal: {CurrentCurrency} {principal}, Term: {termMonths} months, Up-front Fees: {upfrontFees:C}.";
+                $"Interest: {CurrentCurrency} {interest:F2}\n" +
+                $"Inputs — Principal: {CurrentCurrency} {principal}, Term: {termMonths} months or {(termMonths/ monthsInYear):F2} Years, Up-front Fees: {upfrontFees:C}.";
         }
 
         private (decimal capPercent, string label) GetCapForJurisdiction(Jurisdiction j)
@@ -185,6 +187,7 @@ namespace usuryCheck
             SelectedJurisdiction = WrapJurisdictions().First();
             ResultTitle = "Result goes here – e.g. \"Loan complies with XYZ law.\"";
             ResultDetail = string.Empty;
+            CurrentCurrency = "USD";
         }
         private string _currentCurrency = "USD"; // Default value
         public string CurrentCurrency
