@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:usuryCheck"
         mc:Ignorable="d"
         Title="Usury Detector" Height="420" Width="720">
@@ -21,7 +22,6 @@
             <RowDefinition Height="12"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <!-- Title bar -->
         <Border Padding="12" Background="#FFFBD8D8" CornerRadius="6" Grid.Row="0">
             <DockPanel>
@@ -54,14 +54,14 @@
                 <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
                     <TextBlock Text="Principal Amount:" Width="100" VerticalAlignment="Center"/>
                     <TextBox Style="{StaticResource NumericTextBox}" Width="180" FontFamily="Cascadia Mono SemiBold"
-                             Text="{Binding Principal, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Principal, UpdateSourceTrigger=PropertyChanged}" FontSize="14"/>
                 </StackPanel>
 
                 <!-- Term -->
                 <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
-                    <TextBlock Text="Term (months):" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Term (months):" Width="100" VerticalAlignment="Center" FontSize="14"/>
                     <TextBox Style="{StaticResource NumericTextBox}" Width="180"
-                             Text="{Binding TermMonths, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Mono SemiBold"/>
+                             Text="{Binding TermMonths, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Mono SemiBold" FontSize="14"/>
                 </StackPanel>
 
                 <!-- Jurisdiction -->
@@ -92,14 +92,14 @@
                 <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
                     <TextBlock Text="Annual Rate (%):" Width="100" VerticalAlignment="Center"/>
                     <TextBox Style="{StaticResource NumericTextBox}" Width="180" FontFamily="Cascadia Mono SemiBold"
-                             Text="{Binding AnnualRatePercent, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding AnnualRatePercent, UpdateSourceTrigger=PropertyChanged}" FontSize="14"/>
                 </StackPanel>
 
                 <!-- Up-front fees -->
                 <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
                     <TextBlock Text="Up-front Fees:" Width="100" VerticalAlignment="Center"/>
                     <TextBox Style="{StaticResource NumericTextBox}" Width="180" FontFamily="Cascadia Mono SemiBold"
-                             Text="{Binding UpfrontFees, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding UpfrontFees, UpdateSourceTrigger=PropertyChanged}" FontSize="14"/>
                 </StackPanel>
 
                 <!-- Buttons -->
