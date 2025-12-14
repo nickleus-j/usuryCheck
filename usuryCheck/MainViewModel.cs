@@ -169,7 +169,8 @@ namespace usuryCheck
                 $"Computed APR: {effectiveAPR:F2}% (Nominal: {annualRatePercent:F2}%, Fees included: {IncludeFeesInAPR})\n" +
                 $"Jurisdiction cap: {capPercent:F2}%.\n" +
                 $"Interest: {CurrentCurrency} {interest:F2}\n" +
-                $"Inputs — Principal: {CurrentCurrency} {principal}, Term: {termMonths} months or {(termMonths/ monthsInYear):F2} Years, Up-front Fees: {upfrontFees:C}.";
+                $"Inputs — Principal: {CurrentCurrency} {principal}, Term: {termMonths} months or {(termMonths/ monthsInYear):F2} Years, Up-front Fees: {upfrontFees:C}.\n"+
+                $"Interest + Principal + Up-front Fees=  {CurrentCurrency} {principal+interest+ upfrontFees:F2}";
         }
 
         private (decimal capPercent, string label) GetCapForJurisdiction(Jurisdiction j)

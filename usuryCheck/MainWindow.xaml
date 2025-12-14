@@ -26,7 +26,7 @@
         <Border Padding="12" Background="#FFFBD8D8" CornerRadius="6" Grid.Row="0">
             <DockPanel>
                 <TextBlock Text="Usury Detector" FontSize="20" FontWeight="Bold" />
-                <TextBlock Text="  – Enter Data" Foreground="#667" Margin="6,0,0,0"/>
+                <TextBlock Text="  – Enter Data" Foreground="#556" Margin="6,0,0,0"/>
             </DockPanel>
         </Border>
 
@@ -106,9 +106,9 @@
                 <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Left" >
                     <local:CurrencyCompo x:Name="CurrencyField" Currency="{Binding CurrentCurrency, Mode=TwoWay}"/>
                     <Button Content="Calculate" Width="110" Height="32" 
-                            Command="{Binding CalculateCommand}" Background="#FF8EE078" FontFamily="Noto Sans JP Medium"/>
+                            Command="{Binding CalculateCommand}" Background="#FF8EE078" FontFamily="Noto Sans JP Medium" FontSize="14"/>
                     <Button Content="Reset" Width="90" Height="32" Background="#FF6F0B71" FontFamily="Noto Sans JP Medium"
-                            Command="{Binding ResetCommand}" Foreground="White"/>
+                            Command="{Binding ResetCommand}" Foreground="White" FontSize="14"/>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -119,7 +119,7 @@
                 <TextBlock Text="⚖" FontSize="22" Margin="0,0,8,0" VerticalAlignment="Top"/>
                 <StackPanel>
                     <TextBlock Text="{Binding ResultTitle}" FontSize="16" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding ResultDetail}" TextWrapping="Wrap" Margin="0,6,0,0" FontFamily="MS Gothic"/>
+                    <TextBlock Text="{Binding ResultDetail}" TextWrapping="Wrap" Margin="0,6,0,0" FontFamily="MS Gothic" FontSize="14"/>
                     <StackPanel x:Name="DetailsPanel" Margin="0,8,0,0">
                     </StackPanel>
                 </StackPanel>
