@@ -104,7 +104,7 @@ namespace usuryCheck
             set { includeFeesInAPR = value; OnPropertyChanged(); }
         }
 
-        private ComboBoxItemWrapper selectedJurisdiction = new ComboBoxItemWrapper { Text=""};
+        private ComboBoxItemWrapper selectedJurisdiction = new ComboBoxItemWrapper { Text= "Switzerland (CH)" };
         public ComboBoxItemWrapper SelectedJurisdiction
         {
             get => selectedJurisdiction;
@@ -132,6 +132,7 @@ namespace usuryCheck
         {
             CalculateCommand = new RelayCommand(_ => Calculate());
             ResetCommand = new RelayCommand(_ => Reset());
+            Reset();
         }
 
         private void Calculate()
@@ -224,6 +225,6 @@ namespace usuryCheck
     {
         public string Text { get; set; }
         public object Value { get; set; }
-        public override string ToString() => Text;
+        public override string ToString() => Text??String.Empty;
     }
 }

@@ -84,6 +84,12 @@
     "Description": "Typical commercial lending margins in Tonga are ~6% to 11% over base, based on a comparative report. :contentReference[oaicite:8]{index=8}"
   },
   {
+    "Code": "ES",
+    "Name": "Spain (EU)",
+    "MaxAprPercent": 20.0,
+    "Description": "its Usury Law (1908) voids loans with interest `notably higher than normal` or `manifestly disproportionate,` with Spanish courts using the Bank of Spain's average rates (TIN/TAE) as benchmarks, generally finding rates significantly above the average (e.g., 6 percentage points or more) in revolving credit and consumer loans as usurious, making around 20% APR"
+  },
+  {
     "Code": "SB",
     "Name": "Solomon Islands (Pacific)",
     "MaxAprPercent": 11.0,
