@@ -35,7 +35,7 @@ namespace usuryCheck
 
         public string Currency
         {
-            get { return (string)GetValue(CurrencyProperty); }
+            get { return SelectedCurrency; }
             set { SetValue(CurrencyProperty, value); SelectedCurrency = value; }
         }
 
